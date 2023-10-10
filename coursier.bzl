@@ -506,7 +506,7 @@ def _pinned_coursier_fetch_impl(repository_ctx):
         http_files.append("        urls = %s," % repr(
             [remove_auth_from_url(url) for url in artifact["urls"]],
         ))
-        http_files.append("        downloaded_file_path = \"%s\"," % artifact["file"])
+        http_files.append("        downloaded_file_path = \"v1/%s\"," % artifact["file"])
         http_files.append("    )")
 
     http_files.extend(["maven_artifacts = [\n%s\n]" % (",\n".join(["    \"%s\"" % artifact for artifact in maven_artifacts]))])

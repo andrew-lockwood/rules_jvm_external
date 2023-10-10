@@ -9,6 +9,7 @@ java_library(
         "-Xlint:-options",
     ],
     visibility = [
+        "//com/github/bazelbuild/rules_jvm_external:__pkg__",
         "//private/tools/java:__subpackages__",
     ],
     deps = [

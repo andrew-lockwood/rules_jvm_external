@@ -262,6 +262,7 @@ maven_install(
         # dependency when the usually omitted "jar" packaging type is specified.
         "org.mockito:mockito-core:jar:3.3.3",
         "androidx.arch.core:core-testing:aar:2.1.0",
+        "build.buf.protoc-gen-validate:pgv-java-grpc:0.6.13",
     ],
     generate_compat_repositories = True,
     maven_install_json = "//tests/custom_maven_install:regression_testing_install.json",

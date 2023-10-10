@@ -19,6 +19,28 @@ java_test(
 )
 
 java_test(
+    name = "BuildArtifactsTest",
+    srcs = ["BuildArtifactsTest.java"],
+    test_class = "com.github.bazelbuild.rules_jvm_external.BuildArtifactsTest",
+    deps = [
+        artifact(
+            "com.google.guava:guava",
+            repository_name = "regression_testing",
+        ),
+        artifact(
+            "junit:junit",
+            repository_name = "regression_testing",
+        ),
+        artifact(
+            "build.buf.protoc-gen-validate:pgv-java-grpc",
+            repository_name = "regression_testing",
+        ),
+        artifact("org.hamcrest:hamcrest"),
+        artifact("org.hamcrest:hamcrest_core"),
+    ],
+)
+
+java_test(
     name = "GlobalArtifactExclusionsTest",
     srcs = ["GlobalArtifactExclusionsTest.java"],
     test_class = "com.github.bazelbuild.rules_jvm_external.GlobalArtifactExclusionsTest",
